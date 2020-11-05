@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class BankAccount {
 	private double balance;
 	private double amount;
+	private BankAccount otherAccount;
 	//private int NUM_OF_ACCOUNTS = 2;
 	
 	public BankAccount() {}
@@ -36,39 +37,56 @@ public class BankAccount {
 		return "BankAccount [balance=" + balance + ", amount=" + amount + "]";
 	}
 
+	Scanner sc = new Scanner(System.in);
 	
-	public static Scanner sc = new Scanner(System.in);
 	// Open account
-	public void openAccount(Customer c, double balance) {
-		// give username and password, set balance, type
-		//using scanner ask customer to enter username and password
-		String name;
-		System.out.println("Enter username: ");
-		name = sc.nextLine();
-		c.setUsername(name); // sets username of Customer
-		String word;
-		System.out.println("Enter password: ");
-		word = sc.nextLine();
-		c.setPassword(word); // sets password of Customer
-		
-	}
+	public void openAccount() {
 
+	}
+	
 	// Deposit
-	public void deposit(double amount) {
+	public void deposit() {
+		System.out.println("How much would you like to deposit?");
+		amount = sc.nextDouble();
+		
 		if (amount < 0) {
 			System.out.println("Invalid amount!");
+			return;
 		}
 		this.balance += amount;
+		System.out.println("You have successfully deposited $" + amount + " into your account.");
+		System.out.println("If you would like to view your total balance, please go back to the main menu.");
 	}
 
 	// Withdraw
-	public boolean withdraw(double amount) {
-
+	public void withdraw() {
+		System.out.println("How much would you like to withdraw?");
+		amount = sc.nextDouble();
+		
+		if (amount < 0) {
+			System.out.println("Invalid amount!");
+			return;
+		} else if (amount > balance) {
+			System.out.println("Unfortunately, you do not have enough balance in your account."); 
+			return;
+		} 
+		this.balance -= amount;
+		System.out.println("You have successfully withdrawn $" + amount + " from your account.");
 	}
 
 	// Transfer
-	public boolean transfer(BankAccount otherAccount, double amount) {
-
+	public void transfer() {
+//		System.out.println("How much would you like to transfer?");
+//		amount = sc.nextDouble();
+//		
+//		if (this.balance >= amount) {
+//			this.balance -= amount;
+//			otherAccount.balance += amount;
+//			System.out.println("You have successfully transferred your funds.");
+//		} else {
+//			System.out.println("Something went wrong. Please try again.");
+//		}
+		return;
 	}
 
 

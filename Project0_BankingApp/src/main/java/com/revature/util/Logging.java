@@ -8,26 +8,26 @@ public class Logging {
 		
 		public static void LogIt(String level, String message) {
 			switch(level) {
-			case "debug":
-				logger.debug(message);
-				break;
-			case "warn":
-				logger.warn(message);
+			case "fatal":
+				logger.fatal(message);
 				break;
 			case "error":
 				logger.error(message);
 				break;
-			case "fatal":
-				logger.fatal(message);
+			case "warn":
+				logger.warn(message);
 				break;
 			case "info":
 				logger.info(message);
+				break;
+			case "debug":
+				logger.debug(message);
 				break;
 			case "trace":
 				logger.trace(message);
 				break;
 			default:
-				System.out.println("Logger not working");
+				System.out.println("Logger is not working");
 				break;
 			}
 		}
