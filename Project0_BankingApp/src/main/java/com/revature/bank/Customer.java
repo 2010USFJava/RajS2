@@ -1,17 +1,36 @@
 package com.revature.bank;
 
-public class Customer {
+import java.io.Serializable;
+
+import com.revature.util.FileIO;
+import com.revature.util.Logging;
+import com.revature.util.Database;
+
+public class Customer implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1031730799528113995L;
 	private String username;
 	private String password;
-	private int customerID;
+	private static int accountNumber = 1000;
+	private String accountType; //single or joint account
 	
-	public Customer() {}
+	public Customer() {
+		super();
+		Database.customerList.add(this);
+		Logging.LogIt("info", "A customer, " + getUsername() + ", was added");
+	}
 
-	public Customer(String username, String password, int customerID) {
+	public Customer(String username, String password, int accountNumber, String accountType) {
 		super();
 		this.username = username;
 		this.password = password;
-		this.customerID = customerID;
+		this.accountNumber = accountNumber++;
+		this.accountType = accountType;
+		Database.customerList.add(this);
+		FileIO.writeCustomerFile(Database.customerList);
+		Logging.LogIt("info", "A customer was added");
 	}
 
 	public String getUsername() {
@@ -30,21 +49,30 @@ public class Customer {
 		this.password = password;
 	}
 
-	public int getCustomerID() {
-		return customerID;
+	public int getAccountNumber() {
+		return accountNumber;
 	}
 
-	public void setCustomerIdD(int customerID) {
-		this.customerID = customerID;
+	public void setAccountNumber(int accountNumber) {
+		Customer.accountNumber = accountNumber;
+	}
+
+	public String getAccountType() {
+		return accountType;
+	}
+
+	public void setAccountType(String accountType) {
+		this.accountType = accountType;
 	}
 	
-	public static int incrementCustomerID(int customerID) {
-		return customerID++;
-	}
+//	public static int incrementaccountNumber(int accountNumber) { //?
+//		return accountNumber++;
+//	}
 
 	@Override
 	public String toString() {
-		return "Customer [username=" + username + ", password=" + password + ", customerID=" + customerID + "]";
+		return "Customer [username=" + username + ", password=" + password + ", accountNumber=" + accountNumber
+				+ ", accountType=" + accountType + "]";
 	}
-
+	
 }
