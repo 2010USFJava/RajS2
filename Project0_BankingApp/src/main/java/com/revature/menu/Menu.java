@@ -7,16 +7,14 @@ import com.revature.bank.Employee;
 import com.revature.bank.SignIn;
 
 public class Menu {
-	public static Scanner sc = new Scanner(System.in);
-	
-	static BankAccount myAccount = new BankAccount();
+	static Scanner sc = new Scanner(System.in);
 	static String user;
 	static String userC = "Customer";
 	static String userE = "Employee";
 	static String userA = "Admin";
 	
 	public static void mainMenu() {
-		System.out.println("Welcome to the Banking App!");
+		System.out.println("Welcome to Rev Bank!");
 		System.out.println("Please choose one of the following options. Are you a:");
 		System.out.println("\t[N]ew customer");
 		System.out.println("\t[C]urrent customer");
@@ -27,7 +25,7 @@ public class Menu {
 		
 		switch(response.toLowerCase()) {
 			case "n":
-				myAccount.openAccount();
+				BankAccount.myAccount.openAccount();
 				mainMenu();
 				break;
 			case "c":
@@ -37,16 +35,14 @@ public class Menu {
 				break;
 			case "e":
 				user = "Employee";
-				//SignIn.employeeLogin();
 				employeeMenu();
 				break;
 			case "a":
 				user = "Admin";
-				//SignIn.employeeLogin();
 				employeeMenu();
 				break;
 			case "q":
-				System.out.println("Exiting the Banking App. Goodbye!");
+				System.out.println("Exiting Rev Bank. Goodbye!");
 				break;
 			default:
 				System.out.println("Invalid input. Please try again");
@@ -87,19 +83,19 @@ public class Menu {
 		String response = sc.nextLine();
 		switch(response.toLowerCase()) {
 			case "v":
-				System.out.println("Balance: " + myAccount.getBalance());
+				System.out.println("Balance: " + BankAccount.loadedAccount.getBalance());
 				redirectToMenu();
 				break;
 			case "m":
-				myAccount.deposit();
+				BankAccount.loadedAccount.deposit();
 				redirectToMenu();
 				break;
 			case "w":
-				myAccount.withdraw();
+				BankAccount.loadedAccount.withdraw();
 				redirectToMenu();
 				break;
 			case "t":
-				//myAccount.transfer();
+				BankAccount.loadedAccount.transfer();
 				redirectToMenu();
 				break;
 			case "q":
@@ -119,6 +115,7 @@ public class Menu {
 		System.out.println("\t[C]heck customer's personal information");
 		System.out.println("\t[A]pplication approval status");
 		System.out.println("\t[D]elete customer account [ADMINS ONLY]");
+		System.out.println("\t[Q]uit");
 		System.out.println("\tPress any other key to go back to the main menu");
 		
 		String response = sc.nextLine();
@@ -132,6 +129,9 @@ public class Menu {
 				redirectToMenu();
 				break;
 			case "a":
+				System.out.println("Enter the account number of customer: ");
+				sc.nextLine();
+				System.out.println("Status: Application Approved!");
 				Employee.applicationStatus();
 				redirectToMenu();
 				break;
@@ -143,6 +143,9 @@ public class Menu {
 				}
 				Employee.cancelAccount();
 				redirectToMenu();
+				break;
+			case "q":
+				System.out.println("Have a wonderful day! Goodbye!");
 				break;
 			default:
 				mainMenu();

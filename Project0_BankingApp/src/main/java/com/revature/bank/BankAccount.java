@@ -16,6 +16,12 @@ public class BankAccount implements Serializable {
 	private double balance;
 	private double amount;
 	private static int accountNumber = 1000;
+	transient static Scanner sc = new Scanner(System.in);
+	public static BankAccount myAccount = new BankAccount();
+	public static BankAccount loadedAccount;
+	public static Customer c = new Customer();
+	public static Customer loadedCustomer;
+	public static final int LENGTH = 5;
 	
 	public BankAccount() {
 		super();
@@ -27,7 +33,7 @@ public class BankAccount implements Serializable {
 		super();
 		this.balance = balance;
 		this.amount = amount;
-		this.accountNumber = accountNumber++;
+		this.accountNumber = accountNumber;
 		Database.accountList.add(this);
 		FileIO.writeAccountFile(Database.accountList);
 		Logging.LogIt("info", "An account has been added");
@@ -61,13 +67,9 @@ public class BankAccount implements Serializable {
 	public String toString() {
 		return "BankAccount [balance=" + balance + ", amount=" + amount + ", accountNumber=" + accountNumber + "]";
 	}
-
-	transient Scanner sc = new Scanner(System.in);
-	static Customer c = new Customer();
-	public static final int LENGTH = 5;
 	
-	public boolean validate(String input) { //can't check if username is already used because returns username not found
-		if(input.length() < LENGTH) { // || (Database.findCustomerByUsername(input).equals(c.getUsername()))) {
+	public boolean validate(String input) { 
+		if(input.length() < LENGTH) { 
 			System.out.println("Invalid! Please try again.");
 			return false;
 		}
@@ -81,7 +83,7 @@ public class BankAccount implements Serializable {
 				return false;
 			}
 		}
-		if (numberOfNums > 0 && numberOfCh > 0) {
+		if(numberOfNums > 0 && numberOfCh > 0) {
 			return true;
 		}
 		return false;
@@ -121,23 +123,42 @@ public class BankAccount implements Serializable {
 		}
 		if(response.equalsIgnoreCase("s")) {
 			c.setAccountType("Single");
-			//System.out.println("Your account type has been set to: " + c.getAccountType());
-			System.out.println("How much balance would you like to deposit?");
-			double answer = sc.nextDouble();
-			setBalance(answer);
 		} else { 
-			c.setAccountType("Joint"); // implement createJointAccount()
-			System.out.println("Your account type has been set to: " + c.getAccountType());
+			c.setAccountType("Joint");				
 		} 
-		c = new Customer(c.getUsername(), c.getPassword(), c.getAccountNumber(), c.getAccountType()); 
-		
 		System.out.println("You're all set! Thank you for submitting your application.");
-		if(Employee.applicationStatus()) {
-			System.out.println("Congratulations! Your application has been approved.");
+
+		
+		if(Employee.applicationStatus()) { 
+			System.out.println("Congratulations! Your application has been approved.");	
 			
-			BankAccount b = new BankAccount(getBalance(), getAmount(), getAccountNumber());
-			System.out.println("Here's your information: " + b.toString()); 
-			Logging.LogIt("info", c.getUsername() + " was added");
+			if(c.getAccountType().equals("Single")) {
+				System.out.println("What amount would you like to add for your first time deposit?");
+				double answer = sc.nextDouble();
+				//sc.nextLine();
+				setBalance(answer);
+			}
+
+			int cHighestAccountNumber = Database.cFindHighestAccountNumber();
+			c.setAccountNumber(cHighestAccountNumber);
+			Customer addedCustomer = new Customer(c.getUsername(), c.getPassword(), c.getAccountNumber(), c.getAccountType()); 
+			
+			int aHighestAccountNumber = Database.aFindHighestAccountNumber();
+			setAccountNumber(aHighestAccountNumber);
+			
+			if(c.getAccountType().equals("Joint")) {
+				System.out.println("Which current customer would you like to join? Enter their username: ");
+				String name = sc.nextLine();
+				int sameAccountNumber = Database.findCustomerByUsername(name).getAccountNumber();
+				setAccountNumber(sameAccountNumber);
+				setBalance(Database.findAccountByAccountNumber(sameAccountNumber).getBalance());
+			}
+			
+			myAccount = new BankAccount(getBalance(), getAmount(), getAccountNumber());
+			
+			System.out.println("Here's your information: " + myAccount + "\n" + addedCustomer.toString()); 
+			FileIO.writeAccountFile(Database.accountList);
+			Logging.LogIt("info", addedCustomer.getUsername() + " was added");
 		} else {
 			System.out.println("Unfortunately, your application has been denied.");
 		}
@@ -151,10 +172,11 @@ public class BankAccount implements Serializable {
 			System.out.println("Invalid amount!");
 			return;
 		}
-		this.balance += amount;
+		loadedAccount.setBalance(balance+amount);
 		System.out.println("You have successfully deposited $" + amount + " into your account.");
 		System.out.println("If you would like to view your total balance, please go back to the menu.");
-		Logging.LogIt("info", c.getUsername() + " deposited $" + amount + " into their account.");
+		FileIO.writeAccountFile(Database.accountList);
+		Logging.LogIt("info", loadedCustomer.getUsername() + " deposited $" + loadedAccount.getAmount() + " into their account.");
 	}
 
 	public void withdraw() {
@@ -168,26 +190,32 @@ public class BankAccount implements Serializable {
 			System.out.println("Unfortunately, you do not have enough balance in your account."); 
 			return;
 		} 
-		this.balance -= amount;
+		loadedAccount.setBalance(balance-amount);
 		System.out.println("You have successfully withdrawn $" + amount + " from your account.");
-		Logging.LogIt("info", c.getUsername() + " has withdrawn $" + getAmount() + " from their account.");
+		FileIO.writeAccountFile(Database.accountList);
+		Logging.LogIt("info", loadedCustomer.getUsername() + " has withdrawn $" + loadedAccount.getAmount() + " from their account.");
 	}
 
-	// Transfer ? Don't I have to ask or check if they have another account or is that assumed?
-//	public void transfer() {
-//		System.out.println("How much would you like to transfer?");
-//		amount = sc.nextDouble();
-//		
-//		if(this.balance >= amount) {
-//			this.balance -= amount;
-//			b.balance += amount;
-//			System.out.println("You have successfully transferred your funds.");
-//			Logging.LogIt("info", c.getUsername() + " has transferred " + b.getAmount() + " into their account");
-//		} else {
-//			System.out.println("Something went wrong. Please try again.");
-//			Menu.customerMenu();
-//		}
-//	}
+	// Transfer XX
+	public void transfer() {
+		System.out.println("What is the account number you would like to transfer to?");
+		int accountNumber = sc.nextInt();
+		sc.nextLine();
+		System.out.println("How much would you like to transfer?");
+		amount = sc.nextDouble();
+		
+		if(balance >= amount) {
+			loadedAccount.setBalance(balance-amount);
+			double balanceOfTransferCustomer = Database.findAccountByAccountNumber(accountNumber).getBalance();
+			//Database.findAccountByAccountNumber(accountNumber).setBalance(balanceOfTransferCustomer+amount);
+			System.out.println("You have successfully transferred your funds.");
+			FileIO.writeAccountFile(Database.accountList);
+			Logging.LogIt("info", loadedCustomer.getUsername() + " has transferred $" + loadedAccount.getAmount());
+		} else {
+			System.out.println("Something went wrong. Please try again.");
+			Menu.customerMenu();
+		}
+	}
 
 
 }

@@ -10,9 +10,8 @@ public class Driver {
 		FileIO.readAccountFile();
 	}
 	public static void main(String[] args) {
-		
 		Menu.mainMenu();
-		Database.printList();
+//		Database.printList();
 	}
 
 }

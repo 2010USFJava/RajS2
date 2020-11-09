@@ -19,14 +19,14 @@ public class Customer implements Serializable {
 	public Customer() {
 		super();
 		Database.customerList.add(this);
-		Logging.LogIt("info", "A customer, " + getUsername() + ", was added");
+		Logging.LogIt("info", "An empty customer was added");
 	}
 
 	public Customer(String username, String password, int accountNumber, String accountType) {
 		super();
 		this.username = username;
 		this.password = password;
-		this.accountNumber = accountNumber++;
+		this.accountNumber = accountNumber;
 		this.accountType = accountType;
 		Database.customerList.add(this);
 		FileIO.writeCustomerFile(Database.customerList);
@@ -54,7 +54,7 @@ public class Customer implements Serializable {
 	}
 
 	public void setAccountNumber(int accountNumber) {
-		Customer.accountNumber = accountNumber;
+		this.accountNumber = accountNumber;
 	}
 
 	public String getAccountType() {
@@ -64,10 +64,6 @@ public class Customer implements Serializable {
 	public void setAccountType(String accountType) {
 		this.accountType = accountType;
 	}
-	
-//	public static int incrementaccountNumber(int accountNumber) { //?
-//		return accountNumber++;
-//	}
 
 	@Override
 	public String toString() {

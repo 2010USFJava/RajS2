@@ -1,6 +1,7 @@
 package com.revature.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import com.revature.bank.BankAccount;
@@ -11,25 +12,6 @@ import com.revature.menu.Menu;
 public class Database {
 	public static List<Customer> customerList = new ArrayList<Customer>();
 	public static List<BankAccount> accountList = new ArrayList<BankAccount>();
-	//public static List<Employee> employeeList = new ArrayList<Employee>();
-	
-	public static void printList() {
-		for(Customer c: customerList) {
-			System.out.println("Customer List: " + c);
-		}
-		
-		for(BankAccount c: accountList) {
-			System.out.println("Account List: " + c);
-		}
-	}
-	
-//	public static int incrementCustomerAccountID() {
-//		for(int i = 0; i < customerList.size(); i++) {
-//			int customerID = customerList.get(i).getcustomerAccountID();
-//			customerID++;
-//		}
-//		return customerID;
-//	}
 	
 	public static Customer findCustomerByUsername(String input) {
 		for(int i = 0; i < customerList.size(); i++) {
@@ -55,14 +37,14 @@ public class Database {
 		return null;
 	}
 	
-	public static Customer findCustomerByCustomerAccountID(int inputID) {
+	public static Customer findCustomerByCustomerAccountNumber(int inputID) {
 		for(int i = 0; i < customerList.size(); i++) {
 			int accountID = customerList.get(i).getAccountNumber();
 			if(accountID == inputID) { 
 				return customerList.get(i);
 			}
 		}
-		System.out.println("Customer account ID not found");
+		System.out.println("Customer account number not found");
 		Menu.mainMenu();
 		return null;
 	}
@@ -102,4 +84,52 @@ public class Database {
 		Menu.mainMenu();
 		return null;
 	}	
+	
+	public static int aFindHighestAccountNumber() {
+		int highestNumber = 0;
+		for(int i = 0; i < accountList.size(); i++) {
+			int accountNumber = accountList.get(i).getAccountNumber();
+			if(accountNumber > highestNumber) {
+				highestNumber = accountNumber;
+			}
+		}
+		highestNumber++;
+		return highestNumber;
+	}
+	
+	public static int cFindHighestAccountNumber() {
+		int highestNumber = 0;
+		for(int i = 0; i < customerList.size(); i++) {
+			int accountNumber = customerList.get(i).getAccountNumber();
+			if(accountNumber > highestNumber) {
+				highestNumber = accountNumber;
+			}
+		}
+		highestNumber++;
+		return highestNumber;
+	}
+	
+	public static void cprintAccountNumbers() {
+		for(int i = 0; i < customerList.size(); i++) {
+			int accountNumber = customerList.get(i).getAccountNumber();
+			System.out.println("Account numbers of customerList: " + accountNumber);
+		}
+	}
+	
+	public static void aprintAccountNumbers() {
+		for(int i = 0; i < accountList.size(); i++) {
+			int accountNumber = accountList.get(i).getAccountNumber();
+			System.out.println("Account numbers of accountList: " + accountNumber);
+		}
+	}
+	
+	public static void printList() {
+		for(Customer c: customerList) {
+			System.out.println("Customer List: " + c);
+		}
+		
+		for(BankAccount c: accountList) {
+			System.out.println("Account List: " + c);
+		}
+	}
 }

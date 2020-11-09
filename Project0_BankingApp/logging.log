@@ -1,8 +1,12 @@
-[INFO ] 2020-11-07 19:04:21.485 [main] Logging - A customer, null, was added
-[INFO ] 2020-11-07 19:04:21.490 [main] Logging - An empty account has been added
-[INFO ] 2020-11-07 19:04:38.011 [main] Logging - A customer was added
-[INFO ] 2020-11-07 19:04:38.016 [main] Logging - An account has been added
-[INFO ] 2020-11-07 19:04:38.017 [main] Logging - aaaaa1 was added
-[INFO ] 2020-11-07 19:06:22.540 [main] Logging - A customer, null, was added
-[INFO ] 2020-11-07 19:06:22.553 [main] Logging - An empty account has been added
-[INFO ] 2020-11-07 19:07:06.907 [main] Logging - A customer, null, was added
+[INFO ] 2020-11-09 09:43:40.022 [main] Logging - An empty account has been added
+[INFO ] 2020-11-09 09:43:40.025 [main] Logging - An empty customer was added
+[INFO ] 2020-11-09 09:45:56.575 [main] Logging - A customer was added
+[INFO ] 2020-11-09 09:45:56.578 [main] Logging - An account has been added
+[INFO ] 2020-11-09 09:45:56.579 [main] Logging - sukanya1 was added
+[INFO ] 2020-11-09 09:49:32.966 [main] Logging - Deleted account
+[INFO ] 2020-11-09 09:50:31.604 [main] Logging - A customer was added
+[INFO ] 2020-11-09 09:50:31.606 [main] Logging - An account has been added
+[INFO ] 2020-11-09 09:50:31.607 [main] Logging - sukanya2 was added
+[INFO ] 2020-11-09 09:51:08.803 [main] Logging - A customer was added
+[INFO ] 2020-11-09 09:51:14.132 [main] Logging - An account has been added
+[INFO ] 2020-11-09 09:51:14.135 [main] Logging - sukanya3 was added
