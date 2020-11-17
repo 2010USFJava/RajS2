@@ -27,3 +27,19 @@ lastName varchar(20),
 username varchar(20),
 adminPassword varchar(20)
 );
+
+CREATE OR REPLACE FUNCTION bankapp.numoftypechecking()
+ RETURNS bigint
+ LANGUAGE sql
+AS $function$
+	select count(accounttype) from bankapp.bankaccount where accounttype='checking';
+$function$
+;
+
+CREATE OR REPLACE FUNCTION bankapp.numoftypesavings()
+ RETURNS bigint
+ LANGUAGE sql
+AS $function$
+	select count(accounttype) from bankapp.bankaccount where accounttype='savings';
+$function$
+;

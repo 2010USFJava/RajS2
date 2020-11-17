@@ -8,8 +8,10 @@ import com.revature.bank.BankAccount;
 import com.revature.bank.Customer;
 import com.revature.bank.CustomerActions;
 import com.revature.bank.Login;
+import com.revature.dao.AdminDao;
 import com.revature.dao.BankAccountDao;
 import com.revature.dao.CustomerDao;
+import com.revature.daoimpl.AdminDaoImpl;
 import com.revature.daoimpl.BankAccountDaoImpl;
 import com.revature.daoimpl.CustomerDaoImpl;
 import com.revature.util.Log;
@@ -122,9 +124,11 @@ public class Menu {
 		System.out.println("           Welcome Admin!     ");
 		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.println("What would you like to do?");
-		System.out.println("\t[C]reate customer account");
-		System.out.println("\t[S]ee all customer accounts");
-		System.out.println("\t[V]iew customer account"); 
+		System.out.println("\t[O]pen new customer account");
+		System.out.println("\t[C]hecking (number of this type)");
+		System.out.println("\t[S]avings (number of this type)");
+		System.out.println("\t[V]iew all customer accounts");
+		System.out.println("\t[I]ndividual customer account"); 
 		System.out.println("\t[U]pdate customer account");
 		System.out.println("\t[D]elete customer account");
 		System.out.println("\t[L]ogout");
@@ -132,15 +136,33 @@ public class Menu {
 		
 		String response = sc.nextLine();
 		switch(response.toLowerCase()) {
-			case "c":
+			case "o":
 				CustomerActions.openAccount();
 				adminMenu();
 				break;
+			case "c":
+			try {
+				System.out.println("Number of checking account types in RajJDBC Bank: " + b.numOfTypeChecking());
+				System.out.println();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+				adminMenu();
+				break;
 			case "s":
-				AdminActions.viewAll();
+			try {
+				System.out.println("Number of savings account types in RajJDBC Bank: " + b.numOfTypeSavings());
+				System.out.println();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
 				adminMenu();
 				break;
 			case "v":
+				AdminActions.viewAll();
+				adminMenu();
+				break;
+			case "i":
 				AdminActions.viewCustomerInfo();
 				adminMenu();
 				break;

@@ -134,6 +134,8 @@ public class BankAccountDaoImpl implements BankAccountDao {
 			String response = Menu.sc.nextLine();
 			if (response.equalsIgnoreCase("y")) {
 				deleteAccount(currentBankID);
+				Log.LogIt("info", "Account with account ID, " + currentBankID+ " has been deleted.");
+				System.out.println();
 				Menu.mainMenu();
 			} else {
 				Menu.customerMenu();
@@ -154,6 +156,32 @@ public class BankAccountDaoImpl implements BankAccountDao {
 		//System.out.println("This account has been deleted.\n");
 		Log.LogIt("info", "Account with account ID, " + currentBankID+ " has been deleted.");
 		System.out.println();
+	}
+
+	@Override
+	public int numOfTypeChecking() throws SQLException {
+		Connection conn = cf.getConnection();
+		String sql = "select numoftypechecking()";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery();
+		int Checking = 0;
+		while(rs.next()) {
+			Checking = rs.getInt(1);
+		}
+		return Checking;
+	}
+
+	@Override
+	public int numOfTypeSavings() throws SQLException {
+		Connection conn = cf.getConnection();
+		String sql = "select numoftypesavings()";
+		PreparedStatement ps = conn.prepareStatement(sql);
+		ResultSet rs = ps.executeQuery();
+		int Savings = 0;
+		while(rs.next()) {
+			Savings = rs.getInt(1);
+		}
+		return Savings;
 	}
 
 }

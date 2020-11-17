@@ -28,5 +28,8 @@ public interface BankAccountDao {
 	public void deleteIfEmpty() throws SQLException;
 	
 	public void deleteAccount(int currentBankID) throws SQLException;
-
+	
+	public int numOfTypeChecking() throws SQLException;
+	
+	public int numOfTypeSavings() throws SQLException;
 }

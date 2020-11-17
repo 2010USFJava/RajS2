@@ -138,3 +138,40 @@
 [INFO ] 2020-11-17 02:42:08.914 [main] Log - Customer with account ID, 6, has logged out
 [INFO ] 2020-11-17 03:11:10.881 [main] Log - An empty account was added
 [INFO ] 2020-11-17 03:11:54.551 [main] Log - An empty account was added
+[INFO ] 2020-11-17 12:00:22.969 [main] Log - An empty account was added
+[INFO ] 2020-11-17 12:15:55.591 [main] Log - An empty account was added
+[INFO ] 2020-11-17 12:16:23.899 [main] Log - An empty account was added
+[INFO ] 2020-11-17 12:17:13.463 [main] Log - An empty account was added
+[INFO ] 2020-11-17 12:17:37.263 [main] Log - An empty account was added
+[INFO ] 2020-11-17 12:29:17.616 [main] Log - An empty account was added
+[INFO ] 2020-11-17 12:32:13.859 [main] Log - An empty account was added
+[INFO ] 2020-11-17 12:32:21.370 [main] Log - An empty account was added
+[INFO ] 2020-11-17 12:32:32.599 [main] Log - An empty account was added
+[INFO ] 2020-11-17 12:39:00.843 [main] Log - An empty account was added
+[INFO ] 2020-11-17 13:04:59.303 [main] Log - An empty account was added
+[INFO ] 2020-11-17 13:08:45.135 [main] Log - An empty account was added
+[INFO ] 2020-11-17 13:09:35.441 [main] Log - An empty account was added
+[INFO ] 2020-11-17 13:14:07.208 [main] Log - An empty account was added
+[INFO ] 2020-11-17 13:14:34.417 [main] Log - An empty account was added
+[INFO ] 2020-11-17 13:14:37.701 [main] Log - An empty account was added
+[INFO ] 2020-11-17 13:16:07.448 [main] Log - An empty account was added
+[INFO ] 2020-11-17 13:16:21.313 [main] Log - An empty account was added
+[INFO ] 2020-11-17 14:15:33.312 [main] Log - An empty account was added
+[INFO ] 2020-11-17 14:15:41.336 [main] Log - An empty account was added
+[INFO ] 2020-11-17 14:15:49.605 [main] Log - An empty account was added
+[INFO ] 2020-11-17 14:16:06.062 [main] Log - An empty account was added
+[INFO ] 2020-11-17 14:16:32.613 [main] Log - Admin logged in
+[INFO ] 2020-11-17 14:20:30.034 [main] Log - Admin logged in
+[INFO ] 2020-11-17 14:20:47.932 [main] Log - Updated account type of account with account ID, 6, to: checking
+[INFO ] 2020-11-17 14:21:45.464 [main] Log - Updated account type of account with account ID, 7, to: checking
+[INFO ] 2020-11-17 14:23:11.243 [main] Log - Updated account type of account with account ID, 11, to: savings
+[INFO ] 2020-11-17 14:23:37.958 [main] Log - Updated account type of account with account ID, 12, to: checking
+[INFO ] 2020-11-17 14:28:37.385 [main] Log - Admin logged in
+[INFO ] 2020-11-17 15:49:36.665 [main] Log - Customer with account ID, 6 logged in.
+[INFO ] 2020-11-17 15:49:55.382 [main] Log - Account with account ID, 6 deposited into their account.
+[INFO ] 2020-11-17 15:50:12.995 [main] Log - Account with account ID, 6 made a withdrawal.
+[INFO ] 2020-11-17 15:51:56.969 [main] Log - Customer with account ID, 6 logged in.
+[INFO ] 2020-11-17 15:52:25.155 [main] Log - Customer with account ID, 6, has logged out.
+[INFO ] 2020-11-17 15:52:33.101 [main] Log - Admin logged in
+[INFO ] 2020-11-17 15:54:46.319 [main] Log - Admin logged in
+[INFO ] 2020-11-17 16:02:29.065 [main] Log - Customer with account ID, 6 logged in.

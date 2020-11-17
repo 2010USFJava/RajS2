@@ -50,7 +50,7 @@ public class BankAccount {
 
 	@Override
 	public String toString() {
-		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		return "BankAccount -> accountNumber: " + accountNumber + " | balance: " + balance + " | accountType: " + accountType
 				+ "";
 	}
