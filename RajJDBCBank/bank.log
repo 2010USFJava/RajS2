@@ -1,0 +1,140 @@
+[INFO ] 2020-11-14 22:35:28.421 [main] Log - An account with account number, 2, was added
+[INFO ] 2020-11-15 08:46:23.603 [main] Log - An account with account number, 2, was added
+[INFO ] 2020-11-15 08:48:05.746 [main] Log - An account with account number, 2, was added
+[INFO ] 2020-11-15 14:02:25.445 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-15 14:25:03.270 [main] Log - Customer, s1 r1, was added
+[INFO ] 2020-11-15 14:26:13.749 [main] Log - Customer, s1 r1, was added
+[INFO ] 2020-11-15 14:35:21.640 [main] Log - Customer, s1 r1, was added
+[INFO ] 2020-11-15 14:35:23.321 [main] Log - Customer, 2 s1, was added
+[INFO ] 2020-11-15 14:36:27.267 [main] Log - Customer, 3 s1, was added
+[INFO ] 2020-11-15 14:36:28.100 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-15 17:09:19.417 [main] Log - Customer, s1 r1, was added
+[INFO ] 2020-11-15 18:02:01.081 [main] Log - Customer, 4 s1, was added
+[INFO ] 2020-11-15 18:02:01.813 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-15 18:09:51.849 [main] Log - Customer, 4 s1, was added
+[INFO ] 2020-11-15 18:09:52.577 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-15 18:14:42.537 [main] Log - Customer, s1 r1, was added
+[INFO ] 2020-11-15 18:14:43.236 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-15 18:18:17.584 [main] Log - Customer, s1 r1, was added
+[INFO ] 2020-11-15 18:18:17.953 [main] Log - An account with account number, 4, was added
+[INFO ] 2020-11-15 18:22:24.183 [main] Log - Customer, s1 r1, was added
+[INFO ] 2020-11-15 18:22:24.500 [main] Log - An account with account number, 4, was added
+[INFO ] 2020-11-15 19:42:28.403 [main] Log - Customer, John Smith, was added
+[INFO ] 2020-11-15 19:47:08.471 [main] Log - An account with account number, 0, was added
+[INFO ] 2020-11-15 19:47:09.756 [main] Log - Customer, John Smith, was added
+[INFO ] 2020-11-15 20:16:20.533 [main] Log - An account with account number, 1, was added
+[INFO ] 2020-11-15 20:16:21.708 [main] Log - Customer, John Doe, was added
+[INFO ] 2020-11-15 23:38:04.645 [main] Log - Customer, Sponge Bob, was added
+[INFO ] 2020-11-15 23:38:04.965 [main] Log - An account with account number, 3, was added
+[INFO ] 2020-11-15 23:40:34.382 [main] Log - Customer, Sponge Bob, was added
+[INFO ] 2020-11-15 23:40:34.707 [main] Log - An account with account number, 3, was added
+[INFO ] 2020-11-15 23:45:50.151 [main] Log - Customer, Sponge Bob, was added
+[INFO ] 2020-11-15 23:45:50.523 [main] Log - An account with account number, 3, was added
+[INFO ] 2020-11-15 23:46:02.209 [main] Log - Customer, Sponge Bob, was added
+[INFO ] 2020-11-15 23:46:02.516 [main] Log - An account with account number, 3, was added
+[INFO ] 2020-11-15 23:46:19.962 [main] Log - Customer, Sponge Bob, was added
+[INFO ] 2020-11-15 23:46:20.314 [main] Log - An account with account number, 3, was added
+[INFO ] 2020-11-16 00:55:01.352 [main] Log - An account with account number, 0, was added
+[INFO ] 2020-11-16 00:55:02.776 [main] Log - Customer, good night, was added
+[INFO ] 2020-11-16 00:55:33.887 [main] Log - Customer, good night, was added
+[INFO ] 2020-11-16 00:55:34.248 [main] Log - An account with account number, 4, was added
+[INFO ] 2020-11-16 10:51:57.222 [main] Log - An account with account number, 0, was added
+[INFO ] 2020-11-16 10:51:58.275 [main] Log - Customer, sukanya raj, was added
+[INFO ] 2020-11-16 10:52:27.302 [main] Log - Customer, sukanya raj, was added
+[INFO ] 2020-11-16 10:52:27.608 [main] Log - An account with account number, 5, was added
+[INFO ] 2020-11-16 12:49:05.203 [main] Log - An account with account number, 0, was added
+[INFO ] 2020-11-16 12:49:06.771 [main] Log - Customer, sukanya raj, was added
+[INFO ] 2020-11-16 12:49:17.496 [main] Log - Customer, sukanya raj, was added
+[INFO ] 2020-11-16 12:49:17.877 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 13:09:31.296 [main] Log - An account with account number, 0, was added
+[INFO ] 2020-11-16 13:09:32.694 [main] Log - Customer, harry potter, was added
+[INFO ] 2020-11-16 13:13:00.366 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 13:13:00.805 [main] Log - Customer, test test, was added
+[INFO ] 2020-11-16 13:15:42.165 [main] Log - Customer, test test, was added
+[INFO ] 2020-11-16 13:15:42.616 [main] Log - An account with account number, 8, was added
+[INFO ] 2020-11-16 13:17:40.054 [main] Log - An account with account number, 1, was added
+[INFO ] 2020-11-16 13:17:41.450 [main] Log - Customer, testing testing, was added
+[INFO ] 2020-11-16 13:20:19.882 [main] Log - An account with account number, 0, was added
+[INFO ] 2020-11-16 13:20:21.252 [main] Log - Customer, tesingagain testingagain, was added
+[INFO ] 2020-11-16 15:24:50.025 [main] Log - An account with account number, 0, was added
+[INFO ] 2020-11-16 15:24:50.953 [main] Log - Customer, third test, was added
+[INFO ] 2020-11-16 15:35:49.601 [main] Log - An account with account number, 111, was added
+[INFO ] 2020-11-16 15:35:49.990 [main] Log - Customer, test four, was added
+[INFO ] 2020-11-16 15:43:26.461 [main] Log - Customer, tesingagain testingagain, was added
+[INFO ] 2020-11-16 15:43:26.874 [main] Log - An account with account number, 10, was added
+[INFO ] 2020-11-16 15:54:41.597 [main] Log - Deleted account with account number,10
+[INFO ] 2020-11-16 19:18:21.528 [main] Log - Customer, sukanya raj, was added
+[INFO ] 2020-11-16 19:18:21.530 [main] Log - Customer, harry potter, was added
+[INFO ] 2020-11-16 19:18:21.530 [main] Log - Customer, testing testing, was added
+[INFO ] 2020-11-16 19:18:21.530 [main] Log - Customer, third test, was added
+[INFO ] 2020-11-16 19:18:21.531 [main] Log - Customer, test four, was added
+[INFO ] 2020-11-16 19:22:45.057 [main] Log - Customer, sukanya raj, was added
+[INFO ] 2020-11-16 19:22:45.059 [main] Log - Customer, harry potter, was added
+[INFO ] 2020-11-16 19:22:45.059 [main] Log - Customer, testing testing, was added
+[INFO ] 2020-11-16 19:22:45.060 [main] Log - Customer, third test, was added
+[INFO ] 2020-11-16 19:22:45.060 [main] Log - Customer, test four, was added
+[INFO ] 2020-11-16 19:22:45.434 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 19:22:45.436 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 19:22:45.437 [main] Log - An account with account number, 9, was added
+[INFO ] 2020-11-16 19:22:45.438 [main] Log - An account with account number, 11, was added
+[INFO ] 2020-11-16 19:22:45.439 [main] Log - An account with account number, 12, was added
+[INFO ] 2020-11-16 19:22:45.766 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 19:22:45.768 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 19:22:45.768 [main] Log - An account with account number, 9, was added
+[INFO ] 2020-11-16 19:22:45.769 [main] Log - An account with account number, 11, was added
+[INFO ] 2020-11-16 19:22:45.770 [main] Log - An account with account number, 12, was added
+[INFO ] 2020-11-16 19:22:46.092 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 19:22:46.094 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 19:22:46.095 [main] Log - An account with account number, 9, was added
+[INFO ] 2020-11-16 19:22:46.095 [main] Log - An account with account number, 11, was added
+[INFO ] 2020-11-16 19:22:46.096 [main] Log - An account with account number, 12, was added
+[INFO ] 2020-11-16 19:22:46.410 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 19:22:46.411 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 19:22:46.411 [main] Log - An account with account number, 9, was added
+[INFO ] 2020-11-16 19:22:46.411 [main] Log - An account with account number, 11, was added
+[INFO ] 2020-11-16 19:22:46.411 [main] Log - An account with account number, 12, was added
+[INFO ] 2020-11-16 19:22:46.726 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 19:22:46.726 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 19:22:46.727 [main] Log - An account with account number, 9, was added
+[INFO ] 2020-11-16 19:22:46.727 [main] Log - An account with account number, 11, was added
+[INFO ] 2020-11-16 19:22:46.727 [main] Log - An account with account number, 12, was added
+[INFO ] 2020-11-16 20:03:48.477 [main] Log - Customer, sukanya raj, was added
+[INFO ] 2020-11-16 20:03:48.480 [main] Log - Customer, harry potter, was added
+[INFO ] 2020-11-16 20:03:48.480 [main] Log - Customer, testing testing, was added
+[INFO ] 2020-11-16 20:03:48.480 [main] Log - Customer, third test, was added
+[INFO ] 2020-11-16 20:03:48.480 [main] Log - Customer, test four, was added
+[INFO ] 2020-11-16 20:03:48.824 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 20:03:48.825 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 20:03:48.826 [main] Log - An account with account number, 9, was added
+[INFO ] 2020-11-16 20:03:48.827 [main] Log - An account with account number, 11, was added
+[INFO ] 2020-11-16 20:03:48.827 [main] Log - An account with account number, 12, was added
+[INFO ] 2020-11-16 20:03:49.183 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 20:03:49.184 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 20:03:49.185 [main] Log - An account with account number, 9, was added
+[INFO ] 2020-11-16 20:03:49.186 [main] Log - An account with account number, 11, was added
+[INFO ] 2020-11-16 20:03:49.187 [main] Log - An account with account number, 12, was added
+[INFO ] 2020-11-16 20:03:49.494 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 20:03:49.495 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 20:03:49.495 [main] Log - An account with account number, 9, was added
+[INFO ] 2020-11-16 20:03:49.495 [main] Log - An account with account number, 11, was added
+[INFO ] 2020-11-16 20:03:49.495 [main] Log - An account with account number, 12, was added
+[INFO ] 2020-11-16 20:03:49.799 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 20:03:49.799 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 20:03:49.800 [main] Log - An account with account number, 9, was added
+[INFO ] 2020-11-16 20:03:49.800 [main] Log - An account with account number, 11, was added
+[INFO ] 2020-11-16 20:03:49.800 [main] Log - An account with account number, 12, was added
+[INFO ] 2020-11-16 20:03:50.117 [main] Log - An account with account number, 6, was added
+[INFO ] 2020-11-16 20:03:50.117 [main] Log - An account with account number, 7, was added
+[INFO ] 2020-11-16 20:03:50.117 [main] Log - An account with account number, 9, was added
+[INFO ] 2020-11-16 20:03:50.117 [main] Log - An account with account number, 11, was added
+[INFO ] 2020-11-16 20:03:50.118 [main] Log - An account with account number, 12, was added
+[INFO ] 2020-11-16 22:52:31.685 [main] Log - Updated customer with account ID, 11, last name to: doe
+[INFO ] 2020-11-17 01:45:40.794 [main] Log - Updated account type of account with account ID, 6, to: checking
+[INFO ] 2020-11-17 01:47:16.103 [main] Log - Updated account type of account with account ID, 6, to: checking
+[INFO ] 2020-11-17 01:47:59.128 [main] Log - Deleted account with account number, 9
+[INFO ] 2020-11-17 02:23:37.689 [main] Log - Admin has logged out
+[INFO ] 2020-11-17 02:24:22.420 [main] Log - Customer with account ID, 6, has logged out
+[INFO ] 2020-11-17 02:25:47.777 [main] Log - Updated first name of customer with account ID, 6, to: Sukanya
+[INFO ] 2020-11-17 02:42:08.914 [main] Log - Customer with account ID, 6, has logged out
+[INFO ] 2020-11-17 03:11:10.881 [main] Log - An empty account was added
+[INFO ] 2020-11-17 03:11:54.551 [main] Log - An empty account was added
